@@ -1,3 +1,4 @@
+// Pins for accelerometer
 const int xPin = A0;
 const int yPin = A1;
 const int zPin = A2;
@@ -22,6 +23,7 @@ void loop() {
   
   if (Serial.available() > 0){
     readed = Serial.read();
+    // Send command to Serial
     if (readed == 's'){
       Serial.println(message);
     }
